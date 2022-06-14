@@ -1,0 +1,15 @@
+export const route = {
+  HOME: "",
+  AUTH: "auth",
+  LOGIN: "login",
+  REGISTER: "register",
+  TWEET: "/tweet",
+  PROFILE: "profile",
+  NOTIFY: "notify",
+  MESSENGER: "messenger",
+  TWEET_P: "",
+  IMAGE_P: "image",
+  SHARE_P: "share",
+  FRIEND_P: "friends",
+  FLOWER_P: "followers",
+};
