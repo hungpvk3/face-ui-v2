@@ -22,11 +22,11 @@ const Button = ({
   return (
     <button
       disabled={disabled}
-      className={`${fullWidth ? "w-full" : ""} ${
+      className={`block ${fullWidth ? "w-full" : "w-max"} ${
         disabled
-          ? "text-gray-400 bg-gray-200"
-          : "text-white cursor-not-allowed bg-[#ffb74d]"
-      } flex justify-center items-center gap-3 px-5 py-2 font-semibold rounded-md cursor-pointer ${css}`}
+          ? "text-gray-400 bg-gray-200 cursor-not-allowed"
+          : "text-white cursor-pointer bg-[#ffb84d] hover:bg-[#ffb50d]"
+      } flex justify-center items-center gap-3 px-5 py-2 font-semibold rounded-md ${css}`}
       onClick={onClick}
     >
       {startIcon}

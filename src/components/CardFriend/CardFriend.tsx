@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Tippy from "@tippyjs/react";
 import { Button } from "../Button";
+import { icons } from "~/icons";
 
 interface CardFrind {
   image: string;
   name: string;
   action?: string;
 }
+
+const ContentProfile = () => {
+  return <div className="w-[200px] h-[200px]"></div>;
+};
 
 const ContentCard = ({ image, name }: { image: string; name: string }) => {
   return (
@@ -19,8 +24,9 @@ const ContentCard = ({ image, name }: { image: string; name: string }) => {
 };
 
 const CardFriend = ({ image, name, action = "add-friend" }: CardFrind) => {
+  const [visible, setVisible] = useState(false);
   return (
-    <div className="flex items-center justify-between bg-[#202327] rounded-lg p-3">
+    <div className="flex items-center justify-between bg-[#202327] rounded-lg p-3 cursor-pointer">
       <div className="flex items-center gap-3">
         <Tippy
           placement="bottom-start"
@@ -48,6 +54,26 @@ const CardFriend = ({ image, name, action = "add-friend" }: CardFrind) => {
 
       {action === "follower" && (
         <Button label="Xóa" css="px-3 py-2 text-[0.8rem] rounded-full" />
+      )}
+
+      {action === "chat" && (
+        <Tippy
+          className="p-0"
+          interactive
+          placement="top-start"
+          content={<ContentProfile />}
+          visible={visible}
+          onClickOutside={() => setVisible(false)}
+        >
+          <Tippy content="More">
+            <div
+              className="rounded-full hover:bg-gray-700 cursor-pointer"
+              onClick={() => setVisible(true)}
+            >
+              <div className="m-2">{icons.dot}</div>
+            </div>
+          </Tippy>
+        </Tippy>
       )}
     </div>
   );

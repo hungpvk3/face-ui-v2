@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="text-white">
       <div
-        className="h-14 w-full sticky top-0 px-5 backdrop-blur-md"
+        className="h-14 w-full sticky top-0 z-50 px-5 backdrop-blur-md"
         style={{ backgroundColor: "rgba(0, 2, 0, 0.5)" }}
       >
         <div className="text-xl font-bold py-3">Home</div>
