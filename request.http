@@ -1,0 +1,29 @@
+POST https://facebook-api-v2.herokuapp.com/api/web/users
+Content-Type: application/json
+
+{
+    "email": "hungpvbhaf190090@fpt.edu.vn",
+    "firstName": "Pham",
+    "lastName": "Hung",
+    "DoB": "2001-09-04",
+    "password": "12345678",
+    "gender": 1
+}
+
+###
+POST https://facebook-api-v2.herokuapp.com/api/web/users/login
+Content-Type: application/json
+
+{
+    "email": "hungpvbhaf190090@fpt.edu.vn",
+    "password": "12345678",
+}
+
+###
+PATCH https://facebook-api-v2.herokuapp.com/api/web/users/otp/verify
+Content-Type: application/json
+Authorization: 'Bearer '
+
+{
+    "otp": "146118",
+}

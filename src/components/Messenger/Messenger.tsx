@@ -1,7 +1,8 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Messenger = () => {
-  return <div>Messenger</div>;
+  return <Outlet />;
 };
 
 export default Messenger;
